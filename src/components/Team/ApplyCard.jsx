@@ -12,7 +12,7 @@ const ApplyCard = () => {
 
         const formData = new FormData(e.target)
 
-        await axios.post("http://localhost:3000/apply", formData)
+        await axios.post(`${import.meta.env.BACKEND_URL/apply}`, formData)
 
         .then(()=>{
             alert("Email Sent!")

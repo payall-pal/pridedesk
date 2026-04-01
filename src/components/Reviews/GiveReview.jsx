@@ -10,7 +10,7 @@ const GiveReview = () => {
   
       const formData = new FormData(e.target)
   
-      axios.post("http://localhost:3000/give-review", formData)
+      axios.post(`${import.meta.env.BACKEND_URL/give-review}`, formData)
       
       .then(()=>{alert("email sent!")})
 

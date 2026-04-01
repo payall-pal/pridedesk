@@ -8,7 +8,7 @@ const Contact = () => {
 
     const formData = new FormData(e.target)
 
-    axios.post("http://localhost:3000/contact-email", formData)
+    axios.post(`${import.meta.env.BACKEND_URL/contact-email}`, formData)
     .then(()=>{alert("email sent!")})
     .catch((err)=>{
         alert("Error sending message"), 
