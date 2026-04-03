@@ -1,18 +1,23 @@
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 import axios from 'axios'
 
 const GiveReview = () => {
+
+  const [msgRedirect, setMsgRedirect] = useState(false)
 
   const handleSubmit=(e)=> {
       e.preventDefault()
   
       const formData = new FormData(e.target)
   
-      axios.post(`${import.meta.env.BACKEND_URL/give-review}`, formData)
+      axios.post(`${import.meta.env.VITE_BACKEND_URL}/give-review`, formData)
       
-      .then(()=>{alert("email sent!")})
+      .then(()=>{
+        alert("email sent!")
+        setMsgRedirect(true)
+      })
 
       .catch((err)=>{
           alert("Error sending message"), 
@@ -57,7 +62,7 @@ const GiveReview = () => {
                     <input className='pb-[1vw] border-b border-white/50' name='rating' type="text" placeholder='Rating /5' required />
                     <button  className='bg-white/30  cursor-pointer active:scale-95 py-[2vw] lg:py-[0.46vw] rounded-2xl mt-[1vw]'>Send Message</button>
                 </form>
-                <p className='text-white/50 font-medium text-[3vw] lg:text-[0.86vw] mt-[1vw]'>* Thankyou for considering us, and for your rating also</p>
+                <p className={`text-white/50 font-medium text-[3vw] lg:text-[0.86vw] mt-[1vw] ${msgRedirect ? "opacity-100" : "opacity-0"}`}>* Thankyou for considering us, and for your rating also</p>
                
       </div>
     </div>

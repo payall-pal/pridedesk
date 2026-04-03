@@ -69,8 +69,8 @@ const Services = () => {
 
 
 
-  return (
-    <section className='trigger1 lg:w-full w-screen bg-gray-300 lg:h-[60vw] h-[170vw] text-black lg:py-[7vw] lg:p-10 p-[5vw] py-[9vw] relative '>
+    return (
+        <section className='trigger1 lg:w-full w-screen bg-gray-300 lg:h-[60vw] h-[170vw] text-black lg:py-[7vw] lg:p-10 p-[5vw] py-[9vw] relative '>
             <div className='lg:h-[10vw] lg:w-[93vw] w-[80vw]  px-[3vw] lg:px-0 flex gap-[3vw] lg:gap-2'>
                 <div ref={divRef} className='h-full w-1/4  flex lg:gap-3 gap-2'>
                     <div className='lg:h-[1vw] lg:w-[0.2vw] h-[3vw] w-[0.6vw] mt-[0.17vw] bg-orange-800'></div>
@@ -101,14 +101,14 @@ const Services = () => {
 
             <div className='lg:hidden relative block mt-[10vw]'>
 
-                <Swiper modules={[Navigation,Pagination]} pagination={{clickable:true}}  navigation={{ prevEl: '.prev-btn', nextEl: '.next-btn', clickable:true}}  slidesPerView={1} spaceBetween={10} loop={true} grabCursor={true} allowTouchMove={true} >
+                <Swiper modules={[Navigation, Pagination]} pagination={{ clickable: true }} navigation={{ prevEl: '.prev-btn', nextEl: '.next-btn', clickable: true }} slidesPerView={1} spaceBetween={10} loop={true} grabCursor={true} allowTouchMove={true} >
                     {servicesData.map((service, index) => (
                         <SwiperSlide key={index} className='w-full'>
                             <ServiceCard2
                                 key={index} title={service.title} description={service.description} skills={service.skills} index={index}
                             />
-                            
-                                <div className='absolute bottom-[2vw] left-[5vw] prev-btn h-[10vw] w-[10vw] text-[6vw] text-black/30 font-bold rounded-full  flex items-center justify-center'> <i class="ri-arrow-left-s-line"></i></div>
+
+                            <div className='absolute bottom-[2vw] left-[5vw] prev-btn h-[10vw] w-[10vw] text-[6vw] text-black/30 font-bold rounded-full  flex items-center justify-center'> <i class="ri-arrow-left-s-line"></i></div>
                             <div className='absolute bottom-[2vw] right-[5vw] next-btn h-[10vw] w-[10vw] text-[6vw] text-black/30 font-bold rounded-full  flex items-center justify-center'> <i class="ri-arrow-right-s-line"></i> </div>
 
                         </SwiperSlide>
@@ -124,7 +124,7 @@ const Services = () => {
             </div>
 
         </section>
-  )
+    )
 }
 
 export default Services

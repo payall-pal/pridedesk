@@ -6,16 +6,18 @@ const ApplyCard = () => {
     const skillsList = ["Content-creation", "Web Development", "App Development", "Branding"]
 
     const [selectedSkills, setSelectedSkills] = useState([])
+    const [msgRedirect, setMsgRedirect] = useState(false)
 
     const handleSubmit = async (e) => {
         e.preventDefault()
 
         const formData = new FormData(e.target)
 
-        await axios.post(`${import.meta.env.BACKEND_URL/apply}`, formData)
+        await axios.post(`${import.meta.env.VITE_BACKEND_URL}/apply`, formData)
 
         .then(()=>{
             alert("Email Sent!")
+            setMsgRedirect(true)
         })
 
         .catch((err)=>{
@@ -75,7 +77,7 @@ const ApplyCard = () => {
                     <button className='bg-white/30  cursor-pointer active:scale-95 py-[2vw] lg:py-[0.46vw] rounded-2xl mt-[1vw]'>Send Message</button>
                 </form>
                 
-                <p className='text-white/50 font-medium text-[3.2vw] lg:text-[0.86vw]'>* We'll redirect to you within 2-3 working days via e-mail</p>
+                <p className={`text-white/50 font-medium text-[3.2vw] lg:text-[0.86vw] ${msgRedirect ? "opacity-100" : "opacity-0"}`}>* We'll redirect to you within 2-3 working days via e-mail</p>
             </div>
         </div>
     )

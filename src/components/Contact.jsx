@@ -1,20 +1,31 @@
 
 import axios from 'axios'
-
+import { useState } from 'react'
 
 const Contact = () => {
-   const handleSubmit=(e)=> {
-    e.preventDefault()
 
-    const formData = new FormData(e.target)
+    const [msgRedirect, setMsgRedirect] = useState(false)
+    const [text, setText] = useState(null)
 
-    axios.post(`${import.meta.env.BACKEND_URL/contact-email}`, formData)
-    .then(()=>{alert("email sent!")})
-    .catch((err)=>{
-        alert("Error sending message"), 
-        console.log(err)
-    })
-   }
+    const handleSubmit = (e) => {
+        e.preventDefault()
+
+
+        const formData = new FormData(e.target)
+
+        axios.post(`${import.meta.env.VITE_BACKEND_URL}/contact-email`, formData)
+            .then(() => {
+                alert("email sent!")
+                setMsgRedirect(true)
+            })
+            .catch((err) => {
+                alert("Error sending message"),
+                    console.log(err)
+            })
+
+
+
+    }
 
 
 
@@ -32,7 +43,7 @@ const Contact = () => {
                         </div>
                     </div>
                 </div>
-                
+
                 <div className='flex flex-col mt-[19vw]'>
                     <h5 className='font-medium  '>(312) 555-2468</h5>
                     <div className='flex items-center  gap-1'>
@@ -45,12 +56,12 @@ const Contact = () => {
 
 
             <div className='h-full lg:w-1/2 w-full flex flex-col gap-[1vw]'>
-            
-                <h2  className='text-5xl w-1/2 font-semibold'>Have a <span className='text-orange-800/70'>Project</span> in mind??</h2>
+
+                <h2 className='text-5xl w-1/2 font-semibold'>Have a <span className='text-orange-800/70'>Project</span> in mind??</h2>
 
                 {/* Form */}
 
-                <form onSubmit={handleSubmit} className='flex flex-col text-white mt-[20vw] lg:mt-[2.4vw] gap-[6vw] lg:gap-[1.5vw]'> 
+                <form onSubmit={handleSubmit} className='flex flex-col text-white mt-[20vw] lg:mt-[2.4vw] gap-[6vw] lg:gap-[1.5vw]'>
                     <input name='name' className='pb-[1vw] border-b border-white/50' type="text" placeholder='Your name' required />
                     <input name='email' className='pb-[1vw] border-b border-white/50' type="email" placeholder='E-mail' required />
                     <input name='message' className='pb-[1vw] border-b border-white/50' type="text" placeholder='Message' required />
@@ -58,8 +69,8 @@ const Contact = () => {
                 </form>
 
 
-                <p className='text-white/50 font-medium text-[3vw] lg:text-[0.86vw]'>* We'll redirect to you within 24 hrs via e-mail</p>
-               
+                <p className={`text-white/50 font-medium text-[3vw] lg:text-[0.86vw] ${msgRedirect ? "opacity-100" : "opacity-0"}`}>* We'll redirect to you within 24 hrs via e-mail</p>
+
 
                 <div className=' text-white flex w-full gap-[19vw]  mt-[9vw]'>
                     <div className='font-medium flex flex-col gap-[0.8vw] text-white/80 text-lg'>
@@ -67,7 +78,7 @@ const Contact = () => {
                         <a href="/#">Home</a>
                         <a href="/#about">About</a>
                         <a href="/#projects">Projects</a>
-                        
+
                     </div>
                     <div className='font-medium flex flex-col gap-[0.8vw] text-lg text-white/80'>
                         <h5 className='text-white/50 text-sm'>Social</h5>
@@ -79,7 +90,7 @@ const Contact = () => {
 
 
                 <div className='lg:leading-tight leading-[11vw] lg:mt-0 mt-[25vw]'>
-                    
+
                     <h1 className='lg:text-[7vw] flex text-[14vw] text-white/60 font-medium mt-[1vw]'>
                         <span >P</span>
                         <span>r</span>
