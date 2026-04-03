@@ -19,7 +19,7 @@ const Contact = () => {
                 setMsgRedirect(true)
             })
             .catch((err) => {
-                alert("Error sending message"),
+                alert("Error sending message", err),
                     console.log(err)
             })
 
