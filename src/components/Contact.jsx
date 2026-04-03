@@ -9,6 +9,7 @@ const Contact = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
+        console.log('Backend URL:', import.meta.env.VITE_BACKEND_URL)
 
 
         const formData = new FormData(e.target)
