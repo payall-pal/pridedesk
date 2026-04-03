@@ -4,7 +4,7 @@ const Testimonials=({ idx, name, profession, image, review })=>{
     
      return (
         <div>
-            <div className='lg:h-full lg:w-[30vw] h-[110vw] w-[75vw] flex flex-col   bg-white/30 lg:bg-black lg:p-0 p-[6.5vw] rounded-lg lg:gap-1 gap-[14vw]'>
+            <div className=' h-[110vw] w-[80vw] flex flex-col   bg-white/30 lg:bg-black lg:p-0 p-[6.5vw] rounded-lg lg:gap-1 gap-[14vw]'>
                 <div className='lg:h-[6vw] h-[10vw] w-full   text-white/50 rounded-xl lg:px-[2vw] px-[2vw] lg:py-[1.5vw] flex gap-2 items-center'>
                     <img className='lg:h-[3vw] lg:w-[3vw] h-[9vw] w-[9vw] object-cover rounded'
                         src={image} alt="" />

@@ -127,12 +127,12 @@ const About = () => {
 
             <div className='lg:h-[40vw] lg:w-full h-[60vw]  w-full mt-[6vw] lg:mt-[4vw] rounded relative '>
                 <div className=' absolute z-20 lg:left-[42vw] left-[36vw] lg:top-[18vw] top-[24vw] flex lg:gap-[0.6vw] gap-[2vw] items-center'>
-                    <div onClick={handleClick} className={` h-[3vw] w-[3vw] bg-black text-white/80 flex text-[1vw] items-center justify-center cursor-pointer rounded-full`}>
+                    <div onClick={handleClick} className={` lg:h-[3vw] lg:w-[3vw] h-[6.5vw] w-[6.5vw]  bg-black text-white/80 flex text-[2.8vw] lg:text-[1vw] items-center justify-center cursor-pointer rounded-full`}>
                      {isPlaying ? <i class="ri-pause-line"></i> : <i class="ri-play-large-fill"></i>}
                      </div>
                     <div>
                         
-                    <h3 className='lg:text-xl text-[2.7vw] text-white font-medium '>Watch showreel</h3>
+                    <h3 className='lg:text-xl text-[3vw] text-white font-medium '>Watch showreel</h3>
                     <h5 className='lg:block hidden text-white   lg:text-sm'>2006-235</h5>
                     </div>
 

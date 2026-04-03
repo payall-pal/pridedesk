@@ -237,9 +237,10 @@ const Experiences = () => {
             </div>
             <div className='lg:hidden  block mt-[10vw]' >
 
-                <Swiper className='swiper-wraper' modules={[Autoplay]} autoplay={{delay: 0, disableOnInteraction: false,}} speed={3000} slidesPerView={1.2}  spaceBetween={20} loop={true} grabCursor={true} allowTouchMove={false}>
+                <Swiper className='swiper-wraper' modules={[Autoplay]} autoplay={{delay: 0, disableOnInteraction: false,}} speed={4000} slidesPerView={1.1} 
+                 spaceBetween={24} loop={true} grabCursor={true} allowTouchMove={false}>
                     {reviewsData.map((elem, idx) => (
-                        <SwiperSlide key={idx} className=' w-full'>
+                        <SwiperSlide key={idx} className=' w-[100vw]'>
                             <Testimonials
                                 key={idx} image={elem.image} name={elem.name} profession={elem.profession} review={elem.review} idx={idx}
                             />

@@ -4,8 +4,24 @@ import { useState } from 'react'
 
 const Contact = () => {
 
-    const [msgRedirect, setMsgRedirect] = useState(false)
-    const [text, setText] = useState(null)
+    const [text1, setText1] = useState(null)
+    const [text2, setText2] = useState(null)
+    const [text3, setText3] = useState(null)
+
+
+    // Funtions to make inputs empty again after form submission
+    const handleChangeText1 =(e) =>{
+        console.log(e.target.value)
+        setText1(e.target.value)
+    }
+    const handleChangeText2 =(e) =>{
+        console.log(e.target.value)
+        setText2(e.target.value)
+    }
+    const handleChangeText3 =(e) =>{
+        console.log(e.target.value)
+        setText3(e.target.value)
+    }
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -17,7 +33,9 @@ const Contact = () => {
         axios.post(`${import.meta.env.VITE_BACKEND_URL}/contact-email`, formData)
             .then(() => {
                 alert("email sent!")
-                setMsgRedirect(true)
+                setText1("")
+                setText2("")
+                setText3("")
             })
             .catch((err) => {
                 alert("Error sending message", err),
@@ -63,14 +81,14 @@ const Contact = () => {
                 {/* Form */}
 
                 <form onSubmit={handleSubmit} className='flex flex-col text-white mt-[20vw] lg:mt-[2.4vw] gap-[6vw] lg:gap-[1.5vw]'>
-                    <input name='name' className='pb-[1vw] border-b border-white/50' type="text" placeholder='Your name' required />
-                    <input name='email' className='pb-[1vw] border-b border-white/50' type="email" placeholder='E-mail' required />
-                    <input name='message' className='pb-[1vw] border-b border-white/50' type="text" placeholder='Message' required />
+                    <input onChange={handleChangeText1} value={text1} name='name' className='pb-[1vw] border-b border-white/50' type="text" placeholder='Your name' required />
+                    <input onChange={handleChangeText2} value={text2} name='email' className='pb-[1vw] border-b border-white/50' type="email" placeholder='E-mail' required />
+                    <input onChange={handleChangeText3} value={text3} name='message' className='pb-[1vw] border-b border-white/50' type="text" placeholder='Message' required />
                     <button className='bg-white/30  cursor-pointer active:scale-95 py-[2vw] lg:py-[0.46vw] rounded-2xl mt-[1vw]'>Send Message</button>
                 </form>
 
 
-                <p className={`text-white/50 font-medium text-[3vw] lg:text-[0.86vw] ${msgRedirect ? "opacity-100" : "opacity-0"}`}>* We'll redirect to you within 24 hrs via e-mail</p>
+                <p className={`text-white/50 font-medium text-[3vw] lg:text-[0.86vw] `}>* We'll redirect to you within 24 hrs via e-mail</p>
 
 
                 <div className=' text-white flex w-full gap-[19vw]  mt-[9vw]'>

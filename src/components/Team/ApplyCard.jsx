@@ -62,7 +62,7 @@ const ApplyCard = () => {
                                 <option  key={idx} value={skill}>{skill}</option>
                             ))}
                         </select>
-                        <div className='flex gap-[2vw] lg:text-[0.8vw] text-[3.5vw] w-full flex-wrap lg:mt-0 mt-[4vw] '>
+                        <div className='flex gap-[2vw] lg:text-[0.8vw] text-[3.5vw] w-full flex-wrap lg:mt-0 mt-[4vw] lg:mb-[3vw] mb-[8vw] '>
                             {selectedSkills.map((skill, index) => (
                                 <div className=' text-white/70 bg-white/30 lg:py-[0.4vw] px-[4vw] py-[0.7vw] lg:px-[0.9vw] rounded-lg' key={index} > {skill} 
                                 <button onClick={() => removeSkill(skill)}><i class="ri-close-line"></i></button></div>

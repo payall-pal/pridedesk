@@ -102,7 +102,7 @@ const Navbar = () => {
             <a onClick={() => { tl.reverse() }} ref={ el => textRef.current[0] = el} href="/#home">Home</a>
             <a onClick={() => { tl.reverse() }} ref={ el => textRef.current[1] = el} href="/#about">About</a>
             <a onClick={() => { tl.reverse() }} ref={ el => textRef.current[2] = el} href="/#project">Project</a>
-            <a onClick={() => { tl.reverse() }} ref={ el => textRef.current[3] = el} href="/#contact">Contact</a>
+            <a onClick={() => { tl.reverse() }} ref={ el => textRef.current[3] = el} href="/contact">Contact</a>
           </div>
           <div onClick={() => { tl.reverse() }} className='absolute  top-[7%] right-[10%] text-[5.4vw] font-medium'> <i class="ri-close-line"></i></div>
         

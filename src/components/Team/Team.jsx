@@ -73,7 +73,7 @@ const Team = () => {
                         <div className='flex flex-col gap-4 lg:w-[20vw]  w-[45vw] lg:mt-0 mt-[40vw]'>
                             <h4 className='font-medium lg:text-[1.1vw] text-orange-700/80 text-2xl'>Be part of our mission</h4>
                             <h6 className='text-white/60'>If you're ready to create and <br /> collabration, we'd love to hear from you.</h6>
-                            <Link to='./apply' className='bg-white/30 lg:text-lg text-[4vw] text-white/70 border-white border cursor-pointer active:scale-95 px-[2vw] lg:px-[7.5vw] py-[1vw] 
+                            <Link to='./apply' className='bg-white/30 lg:text-lg text-[4vw] text-white/70 border-white border cursor-pointer active:scale-95  px-[10vw] lg:px-[7.5vw] py-[1vw] 
                             lg:py-[0.2vw] rounded-2xl lg:font-medium'>
                             Apply now</Link>
                         </div>

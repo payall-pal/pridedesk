@@ -108,8 +108,8 @@ const Services = () => {
                                 key={index} title={service.title} description={service.description} skills={service.skills} index={index}
                             />
 
-                            <div className='absolute bottom-[2vw] left-[5vw] prev-btn h-[10vw] w-[10vw] text-[6vw] text-black/30 font-bold rounded-full  flex items-center justify-center'> <i class="ri-arrow-left-s-line"></i></div>
-                            <div className='absolute bottom-[2vw] right-[5vw] next-btn h-[10vw] w-[10vw] text-[6vw] text-black/30 font-bold rounded-full  flex items-center justify-center'> <i class="ri-arrow-right-s-line"></i> </div>
+                            {/* <div className='absolute bottom-[2vw] left-[5vw] prev-btn h-[10vw] w-[10vw] text-[6vw] text-black/30 font-bold rounded-full  flex items-center justify-center'> <i class="ri-arrow-left-s-line"></i></div>
+                            <div className='absolute bottom-[2vw] right-[5vw] next-btn h-[10vw] w-[10vw] text-[6vw] text-black/30 font-bold rounded-full  flex items-center justify-center'> <i class="ri-arrow-right-s-line"></i> </div> */}
 
                         </SwiperSlide>
 
