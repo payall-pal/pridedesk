@@ -4,42 +4,50 @@ import { useState } from 'react'
 
 const Contact = () => {
 
-    const [text1, setText1] = useState(null)
-    const [text2, setText2] = useState(null)
-    const [text3, setText3] = useState(null)
+    const [text1, setText1] = useState("")
+    const [text2, setText2] = useState("")
+    const [text3, setText3] = useState("")
 
 
     // Funtions to make inputs empty again after form submission
     const handleChangeText1 =(e) =>{
-        console.log(e.target.value)
         setText1(e.target.value)
     }
     const handleChangeText2 =(e) =>{
-        console.log(e.target.value)
         setText2(e.target.value)
     }
     const handleChangeText3 =(e) =>{
-        console.log(e.target.value)
         setText3(e.target.value)
     }
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault()
-        console.log('Backend URL:', import.meta.env.VITE_BACKEND_URL)
 
 
         const formData = new FormData(e.target)
 
-        axios.post(`${import.meta.env.VITE_BACKEND_URL}/contact-email`, formData)
-            .then(() => {
+        await axios.post(`${import.meta.env.VITE_BACKEND_URL}/contact-email`, formData)
+            .then((res) => {
                 alert("email sent!")
+                console.log("postData", res)
+                
+
                 setText1("")
                 setText2("")
                 setText3("")
             })
             .catch((err) => {
-                alert("Error sending message", err),
-                    console.log(err)
+                console.log(err)
+                alert("Error sending email!")
+            })
+
+            await axios.get(`${import.meta.env.VITE_BACKEND_URL}/email-data`)
+            .then((res)=>{
+                console.log("Data Fetched")
+                console.log(res)
+
+            }).catch((err)=>{
+                console.log(err)
             })
 
 
@@ -88,7 +96,7 @@ const Contact = () => {
                 </form>
 
 
-                <p className={`text-white/50 font-medium text-[3vw] lg:text-[0.86vw] `}>* We'll redirect to you within 24 hrs via e-mail</p>
+                {/* <p className={`text-white/50 font-medium text-[3vw] lg:text-[0.86vw] `}>* We'll redirect to you within 24 hrs via e-mail</p> */}
 
 
                 <div className=' text-white flex w-full gap-[19vw]  mt-[9vw]'>
