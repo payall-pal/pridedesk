@@ -13,21 +13,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import gsap from 'gsap'
 
 const App = () => {
-  // useEffect(()=>{
-  //     const lenis = new Lenis({
-  //       smooth: true
-  //     })
-  //     lenis.on("scroll",
-  //       ScrollTrigger.update
-  //     )
-  //     gsap.ticker.add((time)=>{
-  //       lenis.raf(time * 1000)
-  //     })
-      
-  //     gsap.ticker.lagSmoothing(0)
-      
-  // }, [])
-
+ 
 
 
   return (
@@ -51,3 +37,32 @@ const App = () => {
 }
 
 export default App
+
+
+
+        // <Route path='/projectDetails/:id' element={<ProjectDetails />}/>
+        // to={`/projectDetails/${project.id}`}
+    //     const descriptionRef = useRef(null)
+    // const numRef = useRef(null)
+    // const nameRef = useRef(null)
+
+
+    //ScrollToTop  ~ page bottom side pe khul rha tha
+    // useEffect(() => {
+    //     window.scrollTo(0,0)
+    // },[])
+
+
+
+    // Data Manipulation
+
+    // const { id } = useParams()
+
+    // const project = projects.find((p) => p.id === Number(id))
+
+    // if (!project) return( 
+    //     <h1>Project not found</h1>
+    // )
+
+    
+    // // Animation

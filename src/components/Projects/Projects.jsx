@@ -1,7 +1,6 @@
 
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { Link } from 'react-router-dom'
-
 import { projects } from '../Data/Data'
 import ProjectCard from './ProjectCard'
 import gsap from 'gsap'
@@ -109,7 +108,7 @@ const Projects = () => {
 
             <div className='h-[35vw] w-[92vw] flex flex-wrap lg:gap-[6vw]  mx-[5vw] px-[0.5vw] py-[2vw] '>
                 {projects.map((project, index) => (
-                    <Link key={project.id}   to={`/projectDetails/${project.id}`}><ProjectCard key={index} project={project} image={project.image} name={project.name} index={index} /></Link>
+                    <Link key={project.id}  to={`/projectDetails/${project.id}`}><ProjectCard key={index} project={project} image={project.image} name={project.name} index={index} /></Link>
                 ))}
 
             </div>

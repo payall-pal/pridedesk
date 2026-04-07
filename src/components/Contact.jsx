@@ -26,31 +26,9 @@ const Contact = () => {
 
         const formData = new FormData(e.target)
 
-        await axios.post(`${import.meta.env.VITE_BACKEND_URL}/contact-email`, formData)
-            .then((res) => {
-                alert("email sent!")
-                console.log("postData", res)
-                
+        await axios.post(`${import.meta.env.VITE_BACKEND_URL}/contact-email`, formData).then(()=>{alert("sent")}).catch((error)=>{alert(error)})
 
-                setText1("")
-                setText2("")
-                setText3("")
-            })
-            .catch((err) => {
-                console.log(err)
-                alert("Error sending email!")
-            })
-
-            await axios.get(`${import.meta.env.VITE_BACKEND_URL}/email-data`)
-            .then((res)=>{
-                console.log("Data Fetched")
-                console.log(res)
-
-            }).catch((err)=>{
-                console.log(err)
-            })
-
-
+       
 
     }
 
