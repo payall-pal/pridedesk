@@ -65,7 +65,7 @@ const ProjectDetails = () => {
   return (
     <div className="min-h-screen w-screen text-white/70 relative p-[7vw]">
             <div className="absolute left-[4.5vw] top-[17.4vw] lg:top-[4.2vw] bg-red-800 h-[3vw] w-[0.6vw] lg:h-[0.8vw] lg:w-[0.16vw]"></div>
-            <h2 ref={numRef} className="absolute lg:text-[1vw] text-[3.2vw] left-[17.6] lg:left-[5vw] top-[17vw] lg:top-[4vw]">Project {project.id}</h2>
+            <h2 ref={numRef} className="absolute lg:text-[1vw] text-[3.2vw] left-[23.6] lg:left-[5vw] top-[17vw] lg:top-[4vw]">Project {project.id}</h2>
             <h4 ref={nameRef} className="text-[7vw] lg:text-[2.4vw] mt-[27vw] lg:mt-[4vw]">{project.projectName}</h4>
             <p ref={descriptionRef} className="text-[3.2vw] lg:text-[1vw] text-white/60 lg:text-white/70 font-light mt-[11vw] w-[73vw] lg:w-[53vw] leading-[3.2vw] lg:leading-[1.4vw] lg:tracking-wide">{project.projectDescription}</p>
             
