@@ -70,9 +70,9 @@ const ProjectDetails = () => {
             <p ref={descriptionRef} className="text-[3.2vw] lg:text-[1vw] text-white/60 lg:text-white/70 font-light mt-[11vw] w-[73vw] lg:w-[53vw] leading-[3.2vw] lg:leading-[1.4vw] lg:tracking-wide">{project.projectDescription}</p>
             
             
-            <h4 className="lg:block hidden absolute top-[39%] lg:top-[27%] left-[10%] lg:left-[50%] translate-x-[-50%] text-[8vw] lg:text-[7vw] tracking-widest opacity-50 lg:opacity-40">{project.bgname}</h4>
+            <h4 className="lg:block hidden absolute top-[39%] lg:top-[27%] left-[10%] lg:left-[50%] lg:translate-x-[-50%] text-[8vw] lg:text-[7vw] tracking-widest opacity-50 lg:opacity-40">{project.bgname}</h4>
             <Link to={project.image}> 
-            <img  className="lg:h-[42vw] lg:w-[72vw] h-[52vw] w-[80vw]translate-x-[-50%] object-cover object-center mt-[18vw] lg:mt-[12vw] opacity-80 relative left-[50%] rounded-xl" src={project.image} alt="" />
+            <img  className="lg:h-[42vw] lg:w-[72vw] h-[52vw] w-[80vw] lg:translate-x-[-50%] object-cover object-center mt-[18vw] lg:mt-[12vw] opacity-80 relative left-[5%] lg:left-[50%] rounded-xl" src={project.image} alt="" />
             </Link>
             
         </div>
