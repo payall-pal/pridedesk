@@ -24,28 +24,28 @@ const Services = () => {
     const servicesData = [
         {
             title: "Branding",
-            description: "We create brands that stand out and connect",
-            skills: ["Brand Identity", "Brand strategy", "Visual strategy"]
+            description: "We create brand systems that ensure consistency across platforms",
+            skills: ["Brand Strategy", "Market Positioning", "Brand voice", "Visual Identity"]
 
         },
         {
             title: "App Development",
-            description: "We build modern, fast and scalable websites.",
-            skills: ["buildzz", "app", "technologies", "thinks"]
+            description: "Developing scalable apps with smooth functionality & usability.",
+            skills: ["UI/UX Design", "Backend Systems", "Performance Optimization"]
 
 
         },
         {
-            title: "Branding",
-            description: "We build modern, fast and scalable websites.",
-            skills: ["brand", "front-end", "startup", "team"]
+            title: "Logo designing",
+            description: "Designing logos that define brand identity and visual direction.",
+            skills: ["Brand Identity", "Custom Graphics", "Visual Concepts", "Creative Direction"]
 
 
         },
         {
             title: "Content Creation",
-            description: "We build modern, fast and scalable websites.",
-            skills: ["cursor", "seo", "border"]
+            description: "Producing content for communication across digitsl platforms.",
+            skills: ["Social Content", "Copywriting", "Visual Media", "Content Strategy"]
 
 
         }
