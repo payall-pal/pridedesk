@@ -112,19 +112,7 @@ const Projects = () => {
                 ))}
 
             </div>
-         <div className='flex items-center right-[3vw] bottom-[2.5vw] pr-[5vw] gap-7 rounded-lg text-white/80 absolute '>
-                    <div className='flex flex-col items-center text-center  relative active:scale-95 '>
-                        <h2 className='absolute lg:right-0 lg:bottom-[2.6vw] right-[1vw] bottom-[7vw] lg:text-[1vw] text-[2.9vw] font-medium lg:tracking-[0.1vw]'>Start</h2>
-                        <h2 className='absolute lg:right-[0.5vw] lg:bottom-[1.3vw] right-[1.4vw] bottom-[5vw] lg:text-[1vw] text-[2.9vw] font-medium lg:tracking-[0.1vw]'>a</h2>
-                        <h2 className='absolute lg:right-[-2.3vw] lg:bottom-0 lg:text-[1vw] right-[-2vw] bottom-[2vw] text-[2.9vw] font-medium lg:tracking-[0.1vw]'>project</h2>
-                    </div>
-                    <div className=' absolute lg:bottom-0 lg:right-[0.7vw] right-[0.9vw] bottom-[6vw] bg-black lg:text-xl text-sm cursor-pointer text-white/80 h-[1.6vw] w-[1.6vw] flex items-center justify-between  rounded-full'>
-
-                        <Link to="/contact" ><i class="ri-arrow-right-up-line"></i></Link>
-                    </div>
-
-
-                </div>
+         
 
         </div>
   )
