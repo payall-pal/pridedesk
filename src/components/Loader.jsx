@@ -57,16 +57,16 @@ const Loader = (props) => {
             <div ref={stairParentRef} className='fixed z-20 stair h-screen w-screen flex gap-2 items-center justify-center text-white  bg-black'>
 
             <div className=' h-full w-full items-center justify-center gap-2 flex'>
-                <div className='loader h-[3vw] w-[1vw] text-xl font-semibold flex items-center justify-center '> P </div>
-                <div className='loader h-[3vw] w-[1vw] text-xl font-semibold flex items-center justify-center '> R </div>
-                <div className='loader h-[3vw] w-[1vw] text-xl font-semibold flex items-center justify-center '> I </div>
-                <div className='loader h-[3vw] w-[1vw] text-xl font-semibold flex items-center justify-center '> D </div>
-                <div className='loader h-[3vw] w-[1vw] text-xl font-semibold flex items-center justify-center '> E </div>
+                <div className='loader h-[3vw] w-[1vw] text-xl font-medium lg:font-semibold flex items-center justify-center '> P </div>
+                <div className='loader h-[3vw] w-[1vw] text-xl font-medium lg:font-semibold flex items-center justify-center '> R </div>
+                <div className='loader h-[3vw] w-[1vw] text-xl font-medium lg:font-semibold flex items-center justify-center '> I </div>
+                <div className='loader h-[3vw] w-[1vw] text-xl font-medium lg:font-semibold flex items-center justify-center '> D </div>
+                <div className='loader h-[3vw] w-[1vw] text-xl font-medium lg:font-semibold flex items-center justify-center '> E </div>
 
-                <div className='loader h-[3vw] w-[1vw] text-xl font-semibold flex items-center justify-center '> D </div>
-                <div className='loader h-[3vw] w-[1vw] text-xl font-semibold flex items-center justify-center '> E </div>
-                <div className='loader h-[3vw] w-[1vw] text-xl font-semibold flex items-center justify-center '> S </div>
-                <div className='loader h-[3vw] w-[1vw] text-xl font-semibold flex items-center justify-center '> K </div>
+                <div className='loader h-[3vw] w-[1vw] text-xl font-medium lg:font-semibold flex items-center justify-center '> D </div>
+                <div className='loader h-[3vw] w-[1vw] text-xl font-medium lg:font-semibold flex items-center justify-center '> E </div>
+                <div className='loader h-[3vw] w-[1vw] text-xl font-medium lg:font-semibold flex items-center justify-center '> S </div>
+                <div className='loader h-[3vw] w-[1vw] text-xl font-medium lg:font-semibold flex items-center justify-center '> K </div>
             </div>
 
             </div>
