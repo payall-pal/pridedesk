@@ -71,7 +71,7 @@ const Home=()=>{
             <div className='h-1/2 w-full flex  relative items-end lg:mb-[0.1vw] lg:mx-[0.1vw] mx-[1vw] mb-[8vw]'>
                 <div className='flex items-end justify-between w-2/3 px-5 py-[3vw] pl-[6vw]'>
                     <p ref={el => pRef.current[0] = el} className='lg:w-[24vw] lg:text-[1vw] w-1/2 text-[3vw]  absolute left-[5vw]'> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;  No generic strategies. No empty promises. <br /> Just <span className=' lg:text-[1.1vw] text-[3.6vw] text-orange-800'>Branding, Marketing</span> and <span className=' lg:text-[1.1vw] text-[3.6vw] text-orange-800'>technology</span> that  help <br /> your business grow and stand out.</p>
-                    <div ref={el => boxRef.current[0] = el} className='text-white/80 w-[10vw] absolute lg:left-[70vw] left-[85vw] bottom-[5vw]'>
+                    <div ref={el => boxRef.current[0] = el} className='text-white/80 w-[10vw] absolute lg:left-[70vw] left-[72vw] bottom-[5vw]'>
                         
                         <a className='cursor-pointer text-white/80 lg:text-[1.1vw] text-[3.9vw] font-medium tracking-[0.1vw] flex items-center gap-2' href="#projects">
                         <h5  className='lg:text-[0.9vw] text-[2.96vw] font-medium tracking-[0.1vw] active:scale-95'>View Projects</h5>
